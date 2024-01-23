@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+        <title>Interactive-Quiz</title>
+        <style>
+            #score-card {
+                display: none; /* Initially hide the element */
+            }
+        </style>
+    </head>
+    <body  class="pt-10 flex items-center justify-center bg-gray-100">
+        <div id="quiz-card" class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <form class="space-y-6"  id="myForm" action="#">
+                <h5 class="text-xl text-center font-medium text-gray-900 dark:text-white">Interactive-Quiz</h5>
+                <div>
+                    <label for="first-question" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">1. What is the capital of France?</label>
+                    <div class="flex">
+                        <div class="flex items-center me-4">
+                            <input id="paris" type="radio" value="paris" name="first-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="paris" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Paris</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="london" type="radio" value="london" name="first-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="london" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">London</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="berlin" type="radio" value="berlin" name="first-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="berlin" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Berlin</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="second-question" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">2. Which planet is known as the RedPlanet?</label>
+                    <div class="flex">
+                        <div class="flex items-center me-4">
+                            <input id="mars" type="radio" value="mars" name="second-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="mars" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mars</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="venus" type="radio" value="venus" name="second-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="venus" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Venus</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="jupiter" type="radio" value="jupiter" name="second-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="jupiter" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jupiter</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="third-question" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">3. What is the largest mammal on Earth?</label>
+                    <div class="flex">
+                        <div class="flex items-center me-4">
+                            <input id="elephant" type="radio" value="elephant" name="third-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="elephant" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Elephant</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="bluewhale" type="radio" value="bluewhale" name="third-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="bluewhale" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blue Whale</label>
+                        </div>
+                        <div class="flex items-center me-4">
+                            <input id="giraffe" type="radio" value="giraffe" name="third-question" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="giraffe" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Giraffe</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+            </form>
+        </div>
+        <div id="score-card" class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <h1 class="text-xl text-center font-medium text-gray-900 dark:text-white">Interactive-Quiz</h1>
+            <h3 class="p-3 text-xl text-center font-medium text-gray-600 dark:text-white">Your Quiz Result</h3>
+            <p class="text-center score"></p>
+            <a type="button" href="index.html" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Back</a>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    </body>
+</html>
